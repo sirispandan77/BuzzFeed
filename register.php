@@ -1,6 +1,5 @@
 <?php  
-// links for other pages 
-require 'config/config.php'; 
+require 'config/config.php';
 require 'includes/form_handlers/register_handler.php';
 require 'includes/form_handlers/login_handler.php';
 ?>
@@ -8,8 +7,7 @@ require 'includes/form_handlers/login_handler.php';
 
 <html>
 <head>
-	<title>Welcome to BuzzFeed!</title>
-    <!-- linking CSS file -->
+	<title>Welcome to BuZzfeed!</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="assets/js/register.js"></script>
@@ -17,7 +15,6 @@ require 'includes/form_handlers/login_handler.php';
 <body>
 
 	<?php  
-
 	if(isset($_POST['register_button'])) {
 		echo '
 		<script>
@@ -40,8 +37,7 @@ require 'includes/form_handlers/login_handler.php';
 		<div class="login_box">
 
 			<div class="login_header">
-				<h1>Buzzfeed!</h1>
-				Login or sign up below!
+				<h1>BuZzfeed!</h1>
 			</div>
 			<br>
 			<div id="first">
@@ -58,8 +54,7 @@ require 'includes/form_handlers/login_handler.php';
 					<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo  "Email or password was incorrect<br>"; ?>
 					<input type="submit" name="login_button" value="Login">
 					<br>
-                     <!-- on pressing log in button code in login_handler.php gets executed -->
-					<a href="#" id="signup" class="signup">Need and account? Register here!</a>
+					<a href="#" id="signup" class="signup">Need an account? Register here!</a>
 
 				</form>
 
@@ -110,7 +105,7 @@ require 'includes/form_handlers/login_handler.php';
 					<input type="password" name="reg_password2" placeholder="Confirm Password" required>
 					<br>
 					<?php if(in_array("Your passwords do not match<br>", $error_array)) echo "Your passwords do not match<br>"; 
-					else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo "Your password can only contain english characters or numbers<br>";
+					else if(in_array("Check And enter again<br>", $error_array)) echo "please enter english alphabets ,number *.!@$%^&(){}[]:;<>,.?+-/|= only<br>";
 					else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo "Your password must be betwen 5 and 30 characters<br>"; ?>
 
 
